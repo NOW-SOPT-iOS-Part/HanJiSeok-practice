@@ -44,6 +44,7 @@ class LoginViewController: UIViewController {
                                             blue: 227 / 255,
                                             alpha: 1)
         textField.layer.cornerRadius = 3
+        textField.isSecureTextEntry = true
         return textField
     }()
 
