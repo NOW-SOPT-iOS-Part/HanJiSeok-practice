@@ -22,6 +22,7 @@ class WelcomeViewController: UIViewController {
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 2
+        label.adjustsFontSizeToFitWidth = true
         label.font = UIFont(name: "Pretendard-ExtraBold", size: 25)
         return label
     }()
@@ -84,7 +85,7 @@ class WelcomeViewController: UIViewController {
         loginButton.translatesAutoresizingMaskIntoConstraints = false
 
         welcomeImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        welcomeImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
+        welcomeImage.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
         welcomeImage.widthAnchor.constraint(equalToConstant: 150).isActive = true
         welcomeImage.heightAnchor.constraint(equalToConstant: 150).isActive = true
 
