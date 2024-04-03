@@ -22,6 +22,7 @@ class WelcomeViewController: UIViewController {
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 2
+        label.font = UIFont(name: "Pretendard-ExtraBold", size: 25)
         return label
     }()
 
@@ -36,6 +37,8 @@ class WelcomeViewController: UIViewController {
         button.addAction(UIAction { _ in
             self.backToLoginButtonTapped()
         }, for: .touchUpInside)
+        button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
+        button.layer.cornerRadius = 6
         return button
     }()
 
@@ -53,6 +56,8 @@ class WelcomeViewController: UIViewController {
         button.addAction(UIAction { _ in
             print("LoginButtonTapped")
         }, for: .touchUpInside)
+        button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
+        button.layer.cornerRadius = 6
         return button
     }()
 
