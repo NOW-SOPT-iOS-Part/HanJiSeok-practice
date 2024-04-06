@@ -11,15 +11,22 @@ import SnapKit
 
 class LoginViewController: UIViewController {
 
+    var isSwitchClicked: Bool = false
+
     private let titleLabel: UILabel = {
 <<<<<<< Updated upstream
         let label = UILabel(frame: CGRect(x: 69, y: 161, width: 236, height: 44))
+<<<<<<< HEAD
         label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요"
 =======
         let label = UILabel()
         label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
         label.font = UIFont(name: "Pretendard-Bold", size: 18)
 >>>>>>> Stashed changes
+=======
+        label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
+        label.font = UIFont(name: "Pretendard-Bold", size: 18)
+>>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 2
@@ -29,20 +36,27 @@ class LoginViewController: UIViewController {
     private let idTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "아이디"
+        textField.leftPadding()
+        textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
         textField.backgroundColor = UIColor(red: 221 / 255,
                                             green: 222 / 255,
                                             blue: 227 / 255,
                                             alpha: 1)
+        textField.layer.cornerRadius = 3
         return textField
     }()
 
     private let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "비밀번호"
+        textField.leftPadding()
+        textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
         textField.backgroundColor = UIColor(red: 221 / 255,
                                             green: 222 / 255,
                                             blue: 227 / 255,
                                             alpha: 1)
+        textField.layer.cornerRadius = 3
+        textField.isSecureTextEntry = true
         return textField
     }()
 
@@ -54,6 +68,7 @@ class LoginViewController: UIViewController {
                                          alpha: 1)
         button.setTitle("로그인하기", for: .normal)
         button.setTitleColor(.white, for: .normal)
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         button.addAction(UIAction { _ in
             self.loginButtonTapped()
@@ -66,7 +81,32 @@ class LoginViewController: UIViewController {
             }, for: .touchUpInside)
         button.layer.cornerRadius = 6
 >>>>>>> Stashed changes
+=======
+        button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
+        button.addAction(UIAction { _ in
+            self.loginButtonTapped()
+        }, for: .touchUpInside)
+        button.layer.cornerRadius = 6
+>>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
         return button
+    }()
+
+    private lazy var modalSwitch: UISwitch = {
+        let modalSwitch = UISwitch()
+        modalSwitch.isOn = isSwitchClicked
+        modalSwitch.addAction(UIAction { _ in
+            self.switchTapped()
+        }, for: .touchUpInside)
+        return modalSwitch
+    }()
+
+    private let switchLabel: UILabel = {
+        let label = UILabel()
+        label.text = "모달로 화면 보여주기"
+        label.font = UIFont(name: "Pretendard-Regular", size: 16)
+        label.textColor = .black
+        label.textAlignment = .center
+        return label
     }()
 
     override func viewDidLoad() {
@@ -77,6 +117,7 @@ class LoginViewController: UIViewController {
     }
 
     private func setLayout() {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         [titleLabel, idTextField, passwordTextField, loginButton].forEach { item in
 =======
@@ -84,6 +125,9 @@ class LoginViewController: UIViewController {
             guard let self else { return }
             item.translatesAutoresizingMaskIntoConstraints = false
 >>>>>>> Stashed changes
+=======
+        [titleLabel, idTextField, passwordTextField, loginButton, modalSwitch, switchLabel].forEach { item in
+>>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
             self.view.addSubview(item)
         }
     }
@@ -94,6 +138,7 @@ class LoginViewController: UIViewController {
         idTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         loginButton.translatesAutoresizingMaskIntoConstraints = false
+<<<<<<< HEAD
 =======
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -101,6 +146,10 @@ class LoginViewController: UIViewController {
             $0.width.equalTo(236)
             $0.height.equalTo(44)
         }
+=======
+        modalSwitch.translatesAutoresizingMaskIntoConstraints = false
+        switchLabel.translatesAutoresizingMaskIntoConstraints = false
+>>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
 
         idTextField.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(71)
@@ -156,23 +205,41 @@ class LoginViewController: UIViewController {
         loginButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
         loginButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 58).isActive = true
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
 
         modalSwitch.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 28).isActive = true
         modalSwitch.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
         modalSwitch.heightAnchor.constraint(equalToConstant: 20).isActive = true
+<<<<<<< HEAD
         
         switchLabel.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 32).isActive = true
         switchLabel.leadingAnchor.constraint(equalTo: modalSwitch.trailingAnchor, constant: 12).isActive = true
 >>>>>>> Stashed changes
+=======
+
+        switchLabel.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 32).isActive = true
+        switchLabel.leadingAnchor.constraint(equalTo: modalSwitch.trailingAnchor, constant: 12).isActive = true
+        modalSwitch.heightAnchor.constraint(equalToConstant: 20).isActive = true
+>>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
     }
 }
 
 extension LoginViewController {
+
+    func switchTapped() {
+        isSwitchClicked.toggle()
+    }
+
     private func loginButtonTapped() {
-        presentToWelcomeVC()
-        pushToWelcomeVC()
+        if isSwitchClicked {
+            presentToWelcomeVC()
+        } else {
+            pushToWelcomeVC()
+        }
     }
 
     private func presentToWelcomeVC() {
