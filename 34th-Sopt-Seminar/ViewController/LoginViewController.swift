@@ -14,19 +14,9 @@ class LoginViewController: UIViewController {
     var isSwitchClicked: Bool = false
 
     private let titleLabel: UILabel = {
-<<<<<<< Updated upstream
-        let label = UILabel(frame: CGRect(x: 69, y: 161, width: 236, height: 44))
-<<<<<<< HEAD
-        label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요"
-=======
         let label = UILabel()
         label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
         label.font = UIFont(name: "Pretendard-Bold", size: 18)
->>>>>>> Stashed changes
-=======
-        label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
-        label.font = UIFont(name: "Pretendard-Bold", size: 18)
->>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 2
@@ -68,26 +58,11 @@ class LoginViewController: UIViewController {
                                          alpha: 1)
         button.setTitle("로그인하기", for: .normal)
         button.setTitleColor(.white, for: .normal)
-<<<<<<< HEAD
-<<<<<<< Updated upstream
         button.addAction(UIAction { _ in
             self.loginButtonTapped()
         }, for: .touchUpInside)
-=======
         button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
-        button.addAction(
-            UIAction {  _ in
-                self.loginButtonTapped()
-            }, for: .touchUpInside)
         button.layer.cornerRadius = 6
->>>>>>> Stashed changes
-=======
-        button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
-        button.addAction(UIAction { _ in
-            self.loginButtonTapped()
-        }, for: .touchUpInside)
-        button.layer.cornerRadius = 6
->>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
         return button
     }()
 
@@ -117,39 +92,20 @@ class LoginViewController: UIViewController {
     }
 
     private func setLayout() {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-        [titleLabel, idTextField, passwordTextField, loginButton].forEach { item in
-=======
         [titleLabel, idTextField, passwordTextField, loginButton, modalSwitch, switchLabel].forEach { [weak self] item in
             guard let self else { return }
             item.translatesAutoresizingMaskIntoConstraints = false
->>>>>>> Stashed changes
-=======
-        [titleLabel, idTextField, passwordTextField, loginButton, modalSwitch, switchLabel].forEach { item in
->>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
             self.view.addSubview(item)
         }
     }
 
     private func setAutoLayout() {
-<<<<<<< Updated upstream
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        idTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        loginButton.translatesAutoresizingMaskIntoConstraints = false
-<<<<<<< HEAD
-=======
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().inset(114)
             $0.width.equalTo(236)
             $0.height.equalTo(44)
         }
-=======
-        modalSwitch.translatesAutoresizingMaskIntoConstraints = false
-        switchLabel.translatesAutoresizingMaskIntoConstraints = false
->>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
 
         idTextField.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(71)
@@ -164,7 +120,6 @@ class LoginViewController: UIViewController {
             $0.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(52)
         }
->>>>>>> Stashed changes
 
         loginButton.snp.makeConstraints {
             $0.top.equalTo(passwordTextField.snp.bottom).offset(71)
@@ -205,26 +160,13 @@ class LoginViewController: UIViewController {
         loginButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
         loginButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 58).isActive = true
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
 
         modalSwitch.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 28).isActive = true
         modalSwitch.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
         modalSwitch.heightAnchor.constraint(equalToConstant: 20).isActive = true
-<<<<<<< HEAD
         
         switchLabel.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 32).isActive = true
         switchLabel.leadingAnchor.constraint(equalTo: modalSwitch.trailingAnchor, constant: 12).isActive = true
->>>>>>> Stashed changes
-=======
-
-        switchLabel.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 32).isActive = true
-        switchLabel.leadingAnchor.constraint(equalTo: modalSwitch.trailingAnchor, constant: 12).isActive = true
-        modalSwitch.heightAnchor.constraint(equalToConstant: 20).isActive = true
->>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
     }
 }
 
