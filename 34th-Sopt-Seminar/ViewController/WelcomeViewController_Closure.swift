@@ -1,13 +1,13 @@
 //
-//  WelcomeViewController.swift
+//  WelcomeViewController_Closure.swift
 //  34th-Sopt-Seminar
 //
-//  Created by 한지석 on 3/30/24.
+//  Created by 한지석 on 4/6/24.
 //
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController_Closure: UIViewController {
 
     private let welcomeImage: UIImageView = {
         let image = UIImage(named: "51")
@@ -22,6 +22,8 @@ class WelcomeViewController: UIViewController {
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 2
+        label.adjustsFontSizeToFitWidth = true
+        label.font = UIFont(name: "Pretendard-ExtraBold", size: 25)
         return label
     }()
 
@@ -29,13 +31,15 @@ class WelcomeViewController: UIViewController {
         let button =  UIButton(frame: CGRect(x: 20, y: 426, width: 335, height: 58))
         button.setTitle("메인으로", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor(red: 255 / 255, 
+        button.backgroundColor = UIColor(red: 255 / 255,
                                          green: 111 / 255,
                                          blue: 15 / 255,
                                          alpha: 1)
         button.addAction(UIAction { _ in
             self.backToLoginButtonTapped()
         }, for: .touchUpInside)
+        button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
+        button.layer.cornerRadius = 6
         return button
     }()
 
@@ -53,10 +57,14 @@ class WelcomeViewController: UIViewController {
         button.addAction(UIAction { _ in
             print("LoginButtonTapped")
         }, for: .touchUpInside)
+        button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
+        button.layer.cornerRadius = 6
         return button
     }()
 
     private var id: String?
+    var completionHandler: ((String) -> (Void))?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,17 +75,19 @@ class WelcomeViewController: UIViewController {
     }
 
     private func setLayout() {
-        [welcomeImage, titleLabel, backToLoginButton, loginButton].forEach { [weak self] item in
-            guard let self else { return }
-            self.view.translatesAutoresizingMaskIntoConstraints = false
-            self.view.addSubview(item)
-
+        [welcomeImage, titleLabel, backToLoginButton, loginButton].forEach {
+            self.view.addSubview($0)
         }
     }
 
     private func setAutoLayout() {
+        welcomeImage.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        backToLoginButton.translatesAutoresizingMaskIntoConstraints = false
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+
         welcomeImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        welcomeImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
+        welcomeImage.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
         welcomeImage.widthAnchor.constraint(equalToConstant: 150).isActive = true
         welcomeImage.heightAnchor.constraint(equalToConstant: 150).isActive = true
 
@@ -98,13 +108,11 @@ class WelcomeViewController: UIViewController {
     }
 }
 
-extension WelcomeViewController {
+extension WelcomeViewController_Closure {
     private func backToLoginButtonTapped() {
-        if self.navigationController == nil {
-            self.dismiss(animated: true)
-        } else {
-            self.navigationController?.popViewController(animated: true)
-        }
+        guard let id else { return }
+        completionHandler?(id)
+        self.navigationController?.popViewController(animated: true)
     }
 
     private func bindID() {

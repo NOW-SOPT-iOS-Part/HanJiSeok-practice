@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF10B3022BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10B3012BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift */; };
+		AF10B3042BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10B3032BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift */; };
+		AF10B3062BC11AF0001AFDF7 /* LoginViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10B3052BC11AF0001AFDF7 /* LoginViewController_Closure.swift */; };
+		AF10B3082BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10B3072BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift */; };
+		AF10B30B2BC12578001AFDF7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AF10B30A2BC12578001AFDF7 /* SnapKit */; };
+		AF10B30D2BC12578001AFDF7 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AF10B30C2BC12578001AFDF7 /* SnapKit-Dynamic */; };
+		AF10B30F2BC1317D001AFDF7 /* ScrollViewPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10B30E2BC1317D001AFDF7 /* ScrollViewPractice.swift */; };
 		AF2630172BB7D71200C9FB24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2630162BB7D71200C9FB24 /* AppDelegate.swift */; };
 		AF2630192BB7D71200C9FB24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2630182BB7D71200C9FB24 /* SceneDelegate.swift */; };
 		AF26301E2BB7D71200C9FB24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF26301C2BB7D71200C9FB24 /* Main.storyboard */; };
@@ -17,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF10B3012BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_DelegatePattern.swift; sourceTree = "<group>"; };
+		AF10B3032BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_DelegatePattern.swift; sourceTree = "<group>"; };
+		AF10B3052BC11AF0001AFDF7 /* LoginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Closure.swift; sourceTree = "<group>"; };
+		AF10B3072BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Closure.swift; sourceTree = "<group>"; };
+		AF10B30E2BC1317D001AFDF7 /* ScrollViewPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewPractice.swift; sourceTree = "<group>"; };
 		AF2630132BB7D71200C9FB24 /* 34th-Sopt-Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th-Sopt-Seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2630162BB7D71200C9FB24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF2630182BB7D71200C9FB24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF10B30B2BC12578001AFDF7 /* SnapKit in Frameworks */,
+				AF10B30D2BC12578001AFDF7 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,11 @@
 			children = (
 				AF26302D2BB7E49000C9FB24 /* LoginViewController.swift */,
 				AF26302F2BB7E92000C9FB24 /* WelcomeViewController.swift */,
+				AF10B3012BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift */,
+				AF10B3032BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift */,
+				AF10B3052BC11AF0001AFDF7 /* LoginViewController_Closure.swift */,
+				AF10B3072BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift */,
+				AF10B30E2BC1317D001AFDF7 /* ScrollViewPractice.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -94,6 +113,10 @@
 			dependencies = (
 			);
 			name = "34th-Sopt-Seminar";
+			packageProductDependencies = (
+				AF10B30A2BC12578001AFDF7 /* SnapKit */,
+				AF10B30C2BC12578001AFDF7 /* SnapKit-Dynamic */,
+			);
 			productName = "34th-Sopt-Seminar";
 			productReference = AF2630132BB7D71200C9FB24 /* 34th-Sopt-Seminar.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +145,9 @@
 				Base,
 			);
 			mainGroup = AF26300A2BB7D71200C9FB24;
+			packageReferences = (
+				AF10B3092BC12578001AFDF7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = AF2630142BB7D71200C9FB24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,9 +175,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF10B3062BC11AF0001AFDF7 /* LoginViewController_Closure.swift in Sources */,
 				AF26302E2BB7E49000C9FB24 /* LoginViewController.swift in Sources */,
+<<<<<<< Updated upstream
+=======
+				AF7351B42BBCE11A0097A304 /* UITextField+.swift in Sources */,
+				AF10B3042BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift in Sources */,
+				AF10B3022BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift in Sources */,
+>>>>>>> Stashed changes
 				AF2630302BB7E92000C9FB24 /* WelcomeViewController.swift in Sources */,
 				AF2630172BB7D71200C9FB24 /* AppDelegate.swift in Sources */,
+				AF10B3082BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift in Sources */,
+				AF10B30F2BC1317D001AFDF7 /* ScrollViewPractice.swift in Sources */,
 				AF2630192BB7D71200C9FB24 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +410,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF10B3092BC12578001AFDF7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF10B30A2BC12578001AFDF7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF10B3092BC12578001AFDF7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		AF10B30C2BC12578001AFDF7 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF10B3092BC12578001AFDF7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF26300B2BB7D71200C9FB24 /* Project object */;
 }
