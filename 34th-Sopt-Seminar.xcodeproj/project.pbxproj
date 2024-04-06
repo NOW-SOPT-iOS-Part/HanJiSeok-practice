@@ -232,16 +232,9 @@
 			files = (
 				AF10B3062BC11AF0001AFDF7 /* LoginViewController_Closure.swift in Sources */,
 				AF26302E2BB7E49000C9FB24 /* LoginViewController.swift in Sources */,
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 				AF7351B42BBCE11A0097A304 /* UITextField+.swift in Sources */,
 				AF10B3042BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift in Sources */,
 				AF10B3022BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift in Sources */,
->>>>>>> Stashed changes
-=======
-				AF7351B42BBCE11A0097A304 /* UITextField+.swift in Sources */,
->>>>>>> 191bdfc28f3a9e02bb485c55d97277ae20998caf
 				AF2630302BB7E92000C9FB24 /* WelcomeViewController.swift in Sources */,
 				AF2630172BB7D71200C9FB24 /* AppDelegate.swift in Sources */,
 				AF10B3082BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift in Sources */,
