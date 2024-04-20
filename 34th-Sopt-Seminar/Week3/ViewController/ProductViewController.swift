@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 
 class ProductViewController: UIViewController {
+
     final let carrotLineSpacing: CGFloat = 10
     final let carrotInterLineSpacing: CGFloat = 21
     final let cellHeight: CGFloat = 198
@@ -22,18 +23,34 @@ class ProductViewController: UIViewController {
         return collectionView
     }()
 
+    private func calculateCellHeight() -> CGFloat {
+        let count = CGFloat(products.count)
+        let heightCount = count / 2 + count.truncatingRemainder(dividingBy: 2)
+        return heightCount * cellHeight + (heightCount - 1) * carrotLineSpacing + carrotInset.top + carrotInset.bottom
+    }
+
+    private var products = Product.MockData
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLayout()
+        register()
     }
 
     private func setLayout() {
         self.view.addSubview(collectionView)
-        collectionView.delegate = self
-        collectionView.dataSource = self
         collectionView.snp.makeConstraints {
             $0.top.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(198)
+            $0.bottom.equalToSuperview()
+            $0.height.equalTo(calculateCellHeight())
         }
+    }
+
+    private func register() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(ProductCollectionViewCell.self,
+                                forCellWithReuseIdentifier: ProductCollectionViewCell.identifier)
     }
 }
 
@@ -58,8 +75,20 @@ extension ProductViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension ProductViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return products.count
     }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as? ProductCollectionViewCell else { return UICollectionViewCell()}
+        cell.delegate = self
+        cell.dataBind(products[indexPath.item], row: indexPath.item)
+        return cell
+    }
+}
 
+extension ProductViewController: ProductCollectionViewCellDelegate {
+    func heartButtonDidTapEvent(state: Bool, row: Int) {
+        products[row].isLiked = state
+    }
 }
