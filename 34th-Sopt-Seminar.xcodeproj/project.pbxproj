@@ -31,6 +31,14 @@
 		AF492DF92BCD23B800FA0FCA /* Pretendard-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF492DF02BCD23B800FA0FCA /* Pretendard-ExtraLight.ttf */; };
 		AF492DFA2BCD23B800FA0FCA /* Pretendard-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF492DF12BCD23B800FA0FCA /* Pretendard-ExtraBold.ttf */; };
 		AF7351B42BBCE11A0097A304 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7351B32BBCE11A0097A304 /* UITextField+.swift */; };
+		AFD10AD12BD388B30073F57D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10AD02BD388B30073F57D /* LoginView.swift */; };
+		AFD10AD32BD389B40073F57D /* LoginViewControllerWithMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10AD22BD389B40073F57D /* LoginViewControllerWithMVC.swift */; };
+		AFD10ADD2BD38D090073F57D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10ADC2BD38D090073F57D /* ChatViewController.swift */; };
+		AFD10ADF2BD38D7E0073F57D /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10ADE2BD38D7E0073F57D /* ChatTableViewCell.swift */; };
+		AFD10AE12BD396250073F57D /* ChatPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10AE02BD396250073F57D /* ChatPreview.swift */; };
+		AFD10AE32BD3A3100073F57D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10AE22BD3A3100073F57D /* ProductViewController.swift */; };
+		AFD10AE52BD3A39A0073F57D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10AE42BD3A39A0073F57D /* Product.swift */; };
+		AFD10AE72BD3A6430073F57D /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10AE62BD3A6430073F57D /* ProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +66,14 @@
 		AF492DF02BCD23B800FA0FCA /* Pretendard-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.ttf"; sourceTree = "<group>"; };
 		AF492DF12BCD23B800FA0FCA /* Pretendard-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.ttf"; sourceTree = "<group>"; };
 		AF7351B32BBCE11A0097A304 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		AFD10AD02BD388B30073F57D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AFD10AD22BD389B40073F57D /* LoginViewControllerWithMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerWithMVC.swift; sourceTree = "<group>"; };
+		AFD10ADC2BD38D090073F57D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		AFD10ADE2BD38D7E0073F57D /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		AFD10AE02BD396250073F57D /* ChatPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPreview.swift; sourceTree = "<group>"; };
+		AFD10AE22BD3A3100073F57D /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		AFD10AE42BD3A39A0073F57D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		AFD10AE62BD3A6430073F57D /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +108,11 @@
 		AF2630152BB7D71200C9FB24 /* 34th-Sopt-Seminar */ = {
 			isa = PBXGroup;
 			children = (
+				AFD10AD72BD38CC80073F57D /* Week3 */,
+				AFD10AD62BD38CBA0073F57D /* Week2 */,
+				AFD10AD42BD38CA50073F57D /* Week1 */,
 				AF7351B22BBCE1120097A304 /* Extensions */,
 				AF7351A82BBCDFF20097A304 /* Fonts */,
-				AF26302C2BB7E47A00C9FB24 /* ViewController */,
 				AF2630162BB7D71200C9FB24 /* AppDelegate.swift */,
 				AF2630182BB7D71200C9FB24 /* SceneDelegate.swift */,
 				AF26301C2BB7D71200C9FB24 /* Main.storyboard */,
@@ -103,20 +121,6 @@
 				AF2630242BB7D71400C9FB24 /* Info.plist */,
 			);
 			path = "34th-Sopt-Seminar";
-			sourceTree = "<group>";
-		};
-		AF26302C2BB7E47A00C9FB24 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				AF26302D2BB7E49000C9FB24 /* LoginViewController.swift */,
-				AF26302F2BB7E92000C9FB24 /* WelcomeViewController.swift */,
-				AF10B3012BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift */,
-				AF10B3032BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift */,
-				AF10B3052BC11AF0001AFDF7 /* LoginViewController_Closure.swift */,
-				AF10B3072BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift */,
-				AF3616A12BCE18910019185A /* ScrollViewPractice.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		AF7351A82BBCDFF20097A304 /* Fonts */ = {
@@ -141,6 +145,82 @@
 				AF7351B32BBCE11A0097A304 /* UITextField+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AFD10AD42BD38CA50073F57D /* Week1 */ = {
+			isa = PBXGroup;
+			children = (
+				AFD10AD52BD38CB10073F57D /* ViewController */,
+			);
+			path = Week1;
+			sourceTree = "<group>";
+		};
+		AFD10AD52BD38CB10073F57D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF26302D2BB7E49000C9FB24 /* LoginViewController.swift */,
+				AF26302F2BB7E92000C9FB24 /* WelcomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AFD10AD62BD38CBA0073F57D /* Week2 */ = {
+			isa = PBXGroup;
+			children = (
+				AFD10AD82BD38CCC0073F57D /* ViewController */,
+			);
+			path = Week2;
+			sourceTree = "<group>";
+		};
+		AFD10AD72BD38CC80073F57D /* Week3 */ = {
+			isa = PBXGroup;
+			children = (
+				AFD10ADB2BD38CDB0073F57D /* Model */,
+				AFD10ADA2BD38CD70073F57D /* ViewController */,
+				AFD10AD92BD38CD40073F57D /* View */,
+			);
+			path = Week3;
+			sourceTree = "<group>";
+		};
+		AFD10AD82BD38CCC0073F57D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF10B3012BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift */,
+				AF10B3032BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift */,
+				AF10B3052BC11AF0001AFDF7 /* LoginViewController_Closure.swift */,
+				AF10B3072BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift */,
+				AF3616A12BCE18910019185A /* ScrollViewPractice.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AFD10AD92BD38CD40073F57D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFD10AD02BD388B30073F57D /* LoginView.swift */,
+				AFD10ADE2BD38D7E0073F57D /* ChatTableViewCell.swift */,
+				AFD10AE62BD3A6430073F57D /* ProductCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFD10ADA2BD38CD70073F57D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFD10AD22BD389B40073F57D /* LoginViewControllerWithMVC.swift */,
+				AFD10ADC2BD38D090073F57D /* ChatViewController.swift */,
+				AFD10AE22BD3A3100073F57D /* ProductViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AFD10ADB2BD38CDB0073F57D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFD10AE02BD396250073F57D /* ChatPreview.swift */,
+				AFD10AE42BD3A39A0073F57D /* Product.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,15 +310,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD10AE52BD3A39A0073F57D /* Product.swift in Sources */,
 				AF10B3062BC11AF0001AFDF7 /* LoginViewController_Closure.swift in Sources */,
+				AFD10AE32BD3A3100073F57D /* ProductViewController.swift in Sources */,
 				AF26302E2BB7E49000C9FB24 /* LoginViewController.swift in Sources */,
 				AF7351B42BBCE11A0097A304 /* UITextField+.swift in Sources */,
 				AF10B3042BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift in Sources */,
 				AF10B3022BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift in Sources */,
+				AFD10AE12BD396250073F57D /* ChatPreview.swift in Sources */,
 				AF2630302BB7E92000C9FB24 /* WelcomeViewController.swift in Sources */,
+				AFD10AD32BD389B40073F57D /* LoginViewControllerWithMVC.swift in Sources */,
 				AF2630172BB7D71200C9FB24 /* AppDelegate.swift in Sources */,
 				AF10B3082BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift in Sources */,
+				AFD10ADD2BD38D090073F57D /* ChatViewController.swift in Sources */,
+				AFD10AD12BD388B30073F57D /* LoginView.swift in Sources */,
+				AFD10ADF2BD38D7E0073F57D /* ChatTableViewCell.swift in Sources */,
 				AF3616A22BCE18910019185A /* ScrollViewPractice.swift in Sources */,
+				AFD10AE72BD3A6430073F57D /* ProductCollectionViewCell.swift in Sources */,
 				AF2630192BB7D71200C9FB24 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
