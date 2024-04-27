@@ -18,6 +18,7 @@ class LoginViewControllerWithMVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        setTarget()
     }
 
     private func setTarget() {
@@ -27,7 +28,30 @@ class LoginViewControllerWithMVC: UIViewController {
     }
 
     @objc private func loginButtonTapped() {
-        pushToWelcomeVC()
+        dump(#function)
+        guard let id = rootView.idTextField.text,
+              let password = rootView.passwordTextField.text
+        else { return }
+
+        let loginRequestModel = LoginRequestModel(authenticationId: id, password: password)
+
+        UserService.shared.login(request: loginRequestModel) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success:
+                self.pushToWelcomeVC()
+            case .requestErr:
+                print("요청 오류 입니다")
+            case .decodedErr:
+                print("디코딩 오류 입니다")
+            case .pathErr:
+                print("경로 오류 입니다")
+            case .serverErr:
+                print("서버 오류입니다")
+            case .networkFail:
+                print("네트워크 오류입니다")
+            }
+        }
     }
 
     private func pushToWelcomeVC() {
