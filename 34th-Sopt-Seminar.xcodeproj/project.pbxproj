@@ -42,10 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF10B3012BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_DelegatePattern.swift; sourceTree = "<group>"; };
-		AF10B3032BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_DelegatePattern.swift; sourceTree = "<group>"; };
-		AF10B3052BC11AF0001AFDF7 /* LoginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Closure.swift; sourceTree = "<group>"; };
-		AF10B3072BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Closure.swift; sourceTree = "<group>"; };
 		AF2630132BB7D71200C9FB24 /* 34th-Sopt-Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th-Sopt-Seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2630162BB7D71200C9FB24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF2630182BB7D71200C9FB24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +156,11 @@
 			children = (
 				AF26302D2BB7E49000C9FB24 /* LoginViewController.swift */,
 				AF26302F2BB7E92000C9FB24 /* WelcomeViewController.swift */,
+				AF10B3012BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift */,
+				AF10B3032BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift */,
+				AF10B3052BC11AF0001AFDF7 /* LoginViewController_Closure.swift */,
+				AF10B3072BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift */,
+				AF10B30E2BC1317D001AFDF7 /* ScrollViewPractice.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -310,23 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFD10AE52BD3A39A0073F57D /* Product.swift in Sources */,
-				AF10B3062BC11AF0001AFDF7 /* LoginViewController_Closure.swift in Sources */,
-				AFD10AE32BD3A3100073F57D /* ProductViewController.swift in Sources */,
 				AF26302E2BB7E49000C9FB24 /* LoginViewController.swift in Sources */,
 				AF7351B42BBCE11A0097A304 /* UITextField+.swift in Sources */,
-				AF10B3042BC11889001AFDF7 /* WelcomeViewController_DelegatePattern.swift in Sources */,
-				AF10B3022BC1187D001AFDF7 /* LoginViewController_DelegatePattern.swift in Sources */,
-				AFD10AE12BD396250073F57D /* ChatPreview.swift in Sources */,
 				AF2630302BB7E92000C9FB24 /* WelcomeViewController.swift in Sources */,
 				AFD10AD32BD389B40073F57D /* LoginViewControllerWithMVC.swift in Sources */,
 				AF2630172BB7D71200C9FB24 /* AppDelegate.swift in Sources */,
-				AF10B3082BC11AF8001AFDF7 /* WelcomeViewController_Closure.swift in Sources */,
-				AFD10ADD2BD38D090073F57D /* ChatViewController.swift in Sources */,
-				AFD10AD12BD388B30073F57D /* LoginView.swift in Sources */,
-				AFD10ADF2BD38D7E0073F57D /* ChatTableViewCell.swift in Sources */,
-				AF3616A22BCE18910019185A /* ScrollViewPractice.swift in Sources */,
-				AFD10AE72BD3A6430073F57D /* ProductCollectionViewCell.swift in Sources */,
 				AF2630192BB7D71200C9FB24 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
