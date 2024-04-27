@@ -17,6 +17,31 @@ final class UserService {
 }
 
 extension UserService {
+
+    func login(
+        request: LoginRequestModel,
+        completion: @escaping (NetworkResult<Any>) -> ()) 
+    {
+        userProvider.request(.login(request: request)) { [weak self] result in
+            guard let self = self else { 
+                completion(.networkFail)
+                return
+            }
+            switch result {
+            case .success(let response):
+                let statuscode = response.statusCode
+                let data = response.data
+
+                let networkResult = self.judgeStatus(by: statuscode,
+                                                     data,
+                                                     LoginResponseModel.self)
+                completion(networkResult)
+            case .failure:
+                completion(.networkFail)
+            }
+        }
+    }
+
     func getUserInfo(memberId: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         userProvider.request(.getUserInfo(memberId: memberId)) { result in
             switch result {
@@ -24,7 +49,9 @@ extension UserService {
                 let statusCode = response.statusCode
                 let data = response.data
 
-                let networkResult = self.judgeStatus(by: statusCode, data, UserInfoResponseModel.self)
+                let networkResult = self.judgeStatus(by: statusCode,
+                                                     data,
+                                                     UserInfoResponseModel.self)
                 completion(networkResult)
 
             case .failure:
@@ -42,9 +69,10 @@ extension UserService {
                 let statusCode = response.statusCode
                 let data = response.data
 
-                let networkResult = self.judgeStatus(by: statusCode, data, SignUpResponseModel.self)
+                let networkResult = self.judgeStatus(by: statusCode, 
+                                                     data, 
+                                                     SignUpResponseModel.self)
                 completion(networkResult)
-
             case .failure:
                 completion(.networkFail)
             }

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct LoginRequestModel: Codable {
+    let authenticationId: String
+    let password: String
+}
