@@ -12,12 +12,13 @@ import Moya
 final class UserService {
     static let shared = UserService()
     private var userProvider = MoyaProvider<APITarget.User>(plugins: [MoyaLoggingPlugin()])
-
     private init() {}
 }
 
 extension UserService {
 
+    /// func login: 로그인 기능 입니다
+    /// - Parameter request : LoginRequestModel
     func login(
         request: LoginRequestModel,
         completion: @escaping (NetworkResult<Any>) -> ()) 
@@ -102,3 +103,4 @@ extension UserService {
         return .success(decodedData as Any)
     }
 }
+

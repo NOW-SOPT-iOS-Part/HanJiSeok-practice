@@ -26,6 +26,14 @@
 		AF492DF92BCD23B800FA0FCA /* Pretendard-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF492DF02BCD23B800FA0FCA /* Pretendard-ExtraLight.ttf */; };
 		AF492DFA2BCD23B800FA0FCA /* Pretendard-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF492DF12BCD23B800FA0FCA /* Pretendard-ExtraBold.ttf */; };
 		AF7351B42BBCE11A0097A304 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7351B32BBCE11A0097A304 /* UITextField+.swift */; };
+		AF88DCF42C01BB9E00030825 /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88DCF32C01BB9E00030825 /* LoginViewModelType.swift */; };
+		AF88DCF72C01BBC300030825 /* ObservablePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88DCF62C01BBC300030825 /* ObservablePattern.swift */; };
+		AF88DCFA2C01BC1B00030825 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88DCF92C01BC1B00030825 /* LoginViewModel.swift */; };
+		AF88DCFC2C01BD1600030825 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88DCFB2C01BD1600030825 /* Toast.swift */; };
+		AF88DCFF2C01C73A00030825 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AF88DCFE2C01C73A00030825 /* RxCocoa */; };
+		AF88DD012C01C73A00030825 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF88DD002C01C73A00030825 /* RxSwift */; };
+		AF88DD032C01CA4600030825 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88DD022C01CA4600030825 /* ViewModelType.swift */; };
+		AF88DD052C01CA6600030825 /* LoginViewModelRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88DD042C01CA6600030825 /* LoginViewModelRx.swift */; };
 		AFD10AD32BD389B40073F57D /* LoginViewControllerWithMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10AD22BD389B40073F57D /* LoginViewControllerWithMVC.swift */; };
 		AFD10AF12BDCB76D0073F57D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10AE22BD3A3100073F57D /* ProductViewController.swift */; };
 		AFD10AF22BDCB7760073F57D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10AD02BD388B30073F57D /* LoginView.swift */; };
@@ -48,6 +56,8 @@
 		AFD10B132BDCCF9C0073F57D /* CheckUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10B122BDCCF9C0073F57D /* CheckUserInfoViewController.swift */; };
 		AFD10B152BDCCFB60073F57D /* UserInfoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10B142BDCCFB60073F57D /* UserInfoResponseModel.swift */; };
 		AFD10B182BDCCFF40073F57D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = AFD10B172BDCCFF40073F57D /* Then */; };
+		AFD10B1A2BDCD8370073F57D /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10B192BDCD8370073F57D /* LoginRequestModel.swift */; };
+		AFD10B1C2BDCD85B0073F57D /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD10B1B2BDCD85B0073F57D /* LoginResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +81,12 @@
 		AF492DF02BCD23B800FA0FCA /* Pretendard-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.ttf"; sourceTree = "<group>"; };
 		AF492DF12BCD23B800FA0FCA /* Pretendard-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.ttf"; sourceTree = "<group>"; };
 		AF7351B32BBCE11A0097A304 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		AF88DCF32C01BB9E00030825 /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
+		AF88DCF62C01BBC300030825 /* ObservablePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservablePattern.swift; sourceTree = "<group>"; };
+		AF88DCF92C01BC1B00030825 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AF88DCFB2C01BD1600030825 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		AF88DD022C01CA4600030825 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		AF88DD042C01CA6600030825 /* LoginViewModelRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelRx.swift; sourceTree = "<group>"; };
 		AFD10AD02BD388B30073F57D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AFD10AD22BD389B40073F57D /* LoginViewControllerWithMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerWithMVC.swift; sourceTree = "<group>"; };
 		AFD10ADC2BD38D090073F57D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +106,8 @@
 		AFD10B102BDCCF730073F57D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AFD10B122BDCCF9C0073F57D /* CheckUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUserInfoViewController.swift; sourceTree = "<group>"; };
 		AFD10B142BDCCFB60073F57D /* UserInfoResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponseModel.swift; sourceTree = "<group>"; };
+		AFD10B192BDCD8370073F57D /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
+		AFD10B1B2BDCD85B0073F57D /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +115,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF88DD012C01C73A00030825 /* RxSwift in Frameworks */,
 				AF10B30B2BC12578001AFDF7 /* SnapKit in Frameworks */,
 				AF10B30D2BC12578001AFDF7 /* SnapKit-Dynamic in Frameworks */,
+				AF88DCFF2C01C73A00030825 /* RxCocoa in Frameworks */,
 				AFD10AFB2BDCC85F0073F57D /* Moya in Frameworks */,
 				AFD10B182BDCCFF40073F57D /* Then in Frameworks */,
 			);
@@ -127,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				AFD10AFE2BDCCE460073F57D /* Week4 */,
-				AFD10AD72BD38CC80073F57D /* Week3 */,
+				AFD10AD72BD38CC80073F57D /* Practice */,
 				AFD10AD62BD38CBA0073F57D /* Week2 */,
 				AFD10AD42BD38CA50073F57D /* Week1 */,
 				AF7351B22BBCE1120097A304 /* Extensions */,
@@ -166,6 +186,32 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AF88DCF22C01BB9500030825 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				AF88DCF32C01BB9E00030825 /* LoginViewModelType.swift */,
+				AF88DD022C01CA4600030825 /* ViewModelType.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		AF88DCF52C01BBBD00030825 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				AF88DCF62C01BBC300030825 /* ObservablePattern.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		AF88DCF82C01BC1500030825 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF88DCF92C01BC1B00030825 /* LoginViewModel.swift */,
+				AF88DD042C01CA6600030825 /* LoginViewModelRx.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AFD10AD42BD38CA50073F57D /* Week1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,14 +237,17 @@
 			path = Week2;
 			sourceTree = "<group>";
 		};
-		AFD10AD72BD38CC80073F57D /* Week3 */ = {
+		AFD10AD72BD38CC80073F57D /* Practice */ = {
 			isa = PBXGroup;
 			children = (
+				AF88DCF82C01BC1500030825 /* ViewModel */,
+				AF88DCF52C01BBBD00030825 /* Observable */,
+				AF88DCF22C01BB9500030825 /* Interface */,
 				AFD10ADB2BD38CDB0073F57D /* Model */,
 				AFD10ADA2BD38CD70073F57D /* ViewController */,
 				AFD10AD92BD38CD40073F57D /* View */,
 			);
-			path = Week3;
+			path = Practice;
 			sourceTree = "<group>";
 		};
 		AFD10AD82BD38CCC0073F57D /* ViewController */ = {
@@ -215,6 +264,7 @@
 				AFD10AD02BD388B30073F57D /* LoginView.swift */,
 				AFD10ADE2BD38D7E0073F57D /* ChatTableViewCell.swift */,
 				AFD10AE62BD3A6430073F57D /* ProductCollectionViewCell.swift */,
+				AF88DCFB2C01BD1600030825 /* Toast.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +317,8 @@
 				AFD10B052BDCCEC50073F57D /* SignUpRequestModel.swift */,
 				AFD10B072BDCCED60073F57D /* SignUpResponseModel.swift */,
 				AFD10B142BDCCFB60073F57D /* UserInfoResponseModel.swift */,
+				AFD10B192BDCD8370073F57D /* LoginRequestModel.swift */,
+				AFD10B1B2BDCD85B0073F57D /* LoginResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +353,8 @@
 				AF10B30C2BC12578001AFDF7 /* SnapKit-Dynamic */,
 				AFD10AFA2BDCC85F0073F57D /* Moya */,
 				AFD10B172BDCCFF40073F57D /* Then */,
+				AF88DCFE2C01C73A00030825 /* RxCocoa */,
+				AF88DD002C01C73A00030825 /* RxSwift */,
 			);
 			productName = "34th-Sopt-Seminar";
 			productReference = AF2630132BB7D71200C9FB24 /* 34th-Sopt-Seminar.app */;
@@ -334,6 +388,7 @@
 				AF10B3092BC12578001AFDF7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				AFD10AF92BDCC85F0073F57D /* XCRemoteSwiftPackageReference "Moya" */,
 				AFD10B162BDCCFF40073F57D /* XCRemoteSwiftPackageReference "Then" */,
+				AF88DCFD2C01C73A00030825 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = AF2630142BB7D71200C9FB24 /* Products */;
 			projectDirPath = "";
@@ -372,14 +427,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD10AF52BDCB7870073F57D /* ChatViewController.swift in Sources */,
+				AFD10B1A2BDCD8370073F57D /* LoginRequestModel.swift in Sources */,
 				AFD10AF62BDCB7870073F57D /* ChatTableViewCell.swift in Sources */,
 				AFD10AFD2BDCC9200073F57D /* Config.swift in Sources */,
 				AFD10B022BDCCE860073F57D /* MoyaLoggingPlugin.swift in Sources */,
 				AFD10AF72BDCB7870073F57D /* ProductCollectionViewCell.swift in Sources */,
 				AFD10AF82BDCB7870073F57D /* ScrollViewPractice.swift in Sources */,
 				AFD10AF32BDCB77D0073F57D /* ChatPreview.swift in Sources */,
+				AF88DCFA2C01BC1B00030825 /* LoginViewModel.swift in Sources */,
 				AFD10AF42BDCB77D0073F57D /* Product.swift in Sources */,
 				AFD10B082BDCCED60073F57D /* SignUpResponseModel.swift in Sources */,
+				AF88DCFC2C01BD1600030825 /* Toast.swift in Sources */,
 				AFD10B002BDCCE750073F57D /* NetworkResult.swift in Sources */,
 				AFD10AF22BDCB7760073F57D /* LoginView.swift in Sources */,
 				AFD10AF12BDCB76D0073F57D /* ProductViewController.swift in Sources */,
@@ -390,10 +448,15 @@
 				AF2630302BB7E92000C9FB24 /* WelcomeViewController.swift in Sources */,
 				AFD10B0F2BDCCF410073F57D /* APITarget+User.swift in Sources */,
 				AFD10B152BDCCFB60073F57D /* UserInfoResponseModel.swift in Sources */,
+				AF88DCF42C01BB9E00030825 /* LoginViewModelType.swift in Sources */,
 				AFD10AD32BD389B40073F57D /* LoginViewControllerWithMVC.swift in Sources */,
 				AF2630172BB7D71200C9FB24 /* AppDelegate.swift in Sources */,
+				AF88DCF72C01BBC300030825 /* ObservablePattern.swift in Sources */,
 				AFD10B132BDCCF9C0073F57D /* CheckUserInfoViewController.swift in Sources */,
 				AF2630192BB7D71200C9FB24 /* SceneDelegate.swift in Sources */,
+				AF88DD032C01CA4600030825 /* ViewModelType.swift in Sources */,
+				AF88DD052C01CA6600030825 /* LoginViewModelRx.swift in Sources */,
+				AFD10B1C2BDCD85B0073F57D /* LoginResponseModel.swift in Sources */,
 				AFD10B062BDCCEC50073F57D /* SignUpRequestModel.swift in Sources */,
 				AFD10B0D2BDCCF360073F57D /* APITarget.swift in Sources */,
 			);
@@ -630,6 +693,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		AF88DCFD2C01C73A00030825 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
 		AFD10AF92BDCC85F0073F57D /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
@@ -658,6 +729,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AF10B3092BC12578001AFDF7 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		AF88DCFE2C01C73A00030825 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF88DCFD2C01C73A00030825 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		AF88DD002C01C73A00030825 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF88DCFD2C01C73A00030825 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 		AFD10AFA2BDCC85F0073F57D /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -14,15 +14,19 @@ import Moya
 final class SignUpView: UIView {
 
     private let titleLabel = UILabel()
+    // OCP 접근제어자 없어서 외부에서 변경 가능함
     let idTextField = UITextField()
     let passwordTextField = UITextField()
     let nickNameTextField = UITextField()
     let phoneNumberTextField = UITextField()
     lazy var signUpButton = UIButton()
 
+    // SRP 이 프로퍼티들은 뷰가 가질 필요가 없었음
+    let id: Int = 1
+    let pwd: String = ""
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         setStyle()
         setLayout()
     }
@@ -122,18 +126,12 @@ final class SignUpViewController: UIViewController {
 
     private let rootView = SignUpView()
 
-
-    let userProvider = MoyaProvider<APITarget.User>(
-        plugins:  [MoyaLoggingPlugin()]
-    )
-
     override func loadView() {
         self.view = rootView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.backgroundColor = .white
         setTarget()
     }
@@ -155,6 +153,7 @@ final class SignUpViewController: UIViewController {
             phone: phoneNumber
         )
 
+        // SRP, DIP
         UserService.shared.signUp(request: request) { [weak self] response in
             switch response {
             case .success(let data):
