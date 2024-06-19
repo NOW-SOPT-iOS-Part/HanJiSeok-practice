@@ -39,7 +39,7 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        72
+        100
     }
 }
 
